@@ -1,0 +1,47 @@
+<section class="interests section" id="interests">
+  
+  <div class="section-header bd-grid">
+    <h2 class="section-title">Interests</h2>
+    <i Class="bx bxs-edit edit__icon" (click)="openModalDialog()"></i>
+  </div>
+
+  <div class="interests__container bd-grid">
+      <div class="interests__content" *ngFor="let interest of interests">
+          <i [ngClass]="['bx interests__icon', interest.icon]"></i>
+          <span class="interests__name">{{interest.name}}</span>
+      </div>
+  </div>
+</section>
+
+<p-dialog header="Edit Interests" [(visible)]="displayModal" [modal]="true" [breakpoints]="{'960px': '75vw', '640px': '90vw'}" [style]="{width: '60vw'}" [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+    <div class="grid">
+        <div class="col p-fluid">
+          <!-- <p-chips [(ngModel)]="editedInterests" ></p-chips> -->
+          <p-multiSelect [options]="allInterests" [(ngModel)]="editedInterests" defaultLabel="Select Interests" optionLabel="name" class="multiselect-custom" [baseZIndex]="10010" appendTo="body" display="chip">
+            <!-- <ng-template let-value pTemplate="selectedItems"> -->
+                <!-- <div class="country-item country-item-value" *ngFor="let option of editedInterests">
+                    <i [ngClass]="['bx', option.icon]"></i>
+                    <div>{{option.name}}</div>
+                </div> -->
+                <!-- <div class="interests__content" *ngFor="let option of editedInterests">
+                  <i [ngClass]="['bx interests__icon', option.icon]"></i>
+                  <span class="interests__name">{{option.name}}</span>
+                </div>
+                <div *ngIf="!editedInterests || editedInterests.length === 0" class="country-placeholder">
+                    Select Interests
+                </div>
+            </ng-template> -->
+            <ng-template let-interest pTemplate="item">
+                <div class="multi-select-item">
+                    <!-- <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + country.code.toLowerCase()" /> -->
+                    <i [ngClass]="['bx', interest.icon]"></i>
+                    <div>{{interest.name}}</div>
+                </div>
+            </ng-template>
+        </p-multiSelect>
+        </div>
+    </div>
+        <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="closeModalDialog()" label="Update" styleClass="p-button-raised"></p-button>
+        </ng-template>
+</p-dialog>

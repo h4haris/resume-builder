@@ -1,0 +1,21 @@
+<section class="profile section" id="profile">
+  
+  <div class="section-header bd-grid">
+    <h2 class="section-title">Profile</h2>
+    <i Class="bx bxs-edit edit__icon" (click)="openModalDialog()"></i>
+  </div>
+
+  <p class="profile__description">
+    {{ profile }}
+  </p>
+</section>
+
+<p-dialog header="Edit Profile" [(visible)]="displayModal" [modal]="true" [breakpoints]="{'960px': '75vw', '640px': '90vw'}" [style]="{width: '60vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+    <div class="grid">
+        <div class="col"><textarea pInputTextarea [rows]="5" [cols]="150" [(ngModel)]="editedProfile"></textarea></div>
+    </div>
+        <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="closeModalDialog()" label="Update" styleClass="p-button-raised"></p-button>
+        </ng-template>
+</p-dialog>

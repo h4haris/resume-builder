@@ -1,0 +1,148 @@
+<section class="home" id="home">
+  <div class="home__container section bd-grid">
+    <div class="home__data bd-grid">
+      <img [src]="personal.profileImage" alt="" class="home__img" />
+      <h1 class="home__title">
+        {{ personal.firstName }} <b> {{ personal.lastName }}</b>
+      </h1>
+      <h3 class="home__profession">{{ personal.profession }}</h3>
+
+      <div>
+        <a download="" href="assets/pdf/ResumeCv.pdf" class="home__button-movil"
+          >Download</a
+        >
+      </div>
+    </div>
+
+    <div class="home__address bs-grid">
+      <span class="home__information">
+        <i class="bx bx-map home__icon"></i> {{ personal.address }}
+      </span>
+      <span class="home__information">
+        <i class="bx bx-envelope home__icon"></i> {{ personal.email }}
+      </span>
+      <span class="home__information">
+        <i class="bx bx-phone home__icon"></i> {{ personal.phone }}
+      </span>
+    </div>
+  </div>
+
+  <!-- Edit Personal Info button -->
+  <i Class="bx bxs-edit edit__icon home__edit" (click)="openModalDialog()"></i>
+
+  <!-- Theme change button -->
+  <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
+
+  <!-- Button to generate and download the pdf. Available for desktop. -->
+  <i
+    class="bx bx-download generate-pdf"
+    title="Generate PDF"
+    id="resume-button"
+  ></i>
+</section>
+
+<p-dialog
+  header="Edit Personal Info"
+  [(visible)]="displayModal"
+  [modal]="true"
+  [breakpoints]="{ '960px': '75vw', '640px': '90vw' }"
+  [style]="{ width: '60vw' }"
+  [baseZIndex]="10000"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <div class="formgrid grid">
+    <div class="field col-3">
+      <label for="firstName">First Name</label>
+      <input
+        id="firstName"
+        type="text"
+        class="inputfield w-full"
+        pInputText
+        [(ngModel)]="editedPersonal.firstName"
+      />
+    </div>
+    <div class="field col-3">
+      <label for="lastName">Last Name</label>
+      <input
+        id="lastName"
+        type="text"
+        class="inputfield w-full"
+        pInputText
+        [(ngModel)]="editedPersonal.lastName"
+      />
+    </div>
+    <div class="field col-3">
+      <label for="profession">Profession</label>
+      <input
+        id="profession"
+        type="text"
+        class="inputfield w-full"
+        pInputText
+        [(ngModel)]="editedPersonal.profession"
+      />
+    </div>
+    <div class="field col-3">
+      <label for="address">Address</label>
+      <input
+        id="address"
+        type="text"
+        class="inputfield w-full"
+        pInputText
+        [(ngModel)]="editedPersonal.address"
+      />
+    </div>
+    <div class="field col-3">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="text"
+        class="inputfield w-full"
+        pInputText
+        [(ngModel)]="editedPersonal.email"
+      />
+    </div>
+    <div class="field col-3">
+      <label for="phone">Contact #</label>
+      <input
+        id="phone"
+        type="text"
+        class="inputfield w-full"
+        pInputText
+        [(ngModel)]="editedPersonal.phone"
+      />
+    </div>
+    <div class="field col-12 mt-3">
+      <label for="pic">Profile Picture</label>
+      <p-fileUpload
+        id="pic"
+        name="demo[]"
+        [maxFileSize]="524288000"
+        invalidFileSizeMessageDetail="maximum upload size is {0}."
+        [auto]="true"
+        accept="image/*"
+        chooseLabel="Choose Picture"
+        [customUpload]="true"
+        (uploadHandler)="setUploadedFile($event)"
+        (onSelect)="removeUploadedFile($event)"
+        (onRemove)="removeUploadedFile($event)"
+      >
+        <!-- <ng-template pTemplate="content">
+                  <div class="drop-area" *ngIf="uploadedFile.length == 0">
+                      Select a profile picture
+                      <br /> or
+                      <br /> Drag and drop here
+                  </div>
+              </ng-template> -->
+      </p-fileUpload>
+    </div>
+  </div>
+  <ng-template pTemplate="footer">
+    <p-button
+      icon="pi pi-check"
+      (click)="closeModalDialog()"
+      label="Update"
+      styleClass="p-button-raised"
+    ></p-button>
+  </ng-template>
+</p-dialog>

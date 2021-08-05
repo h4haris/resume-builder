@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+.sidebar-button{
+    position: fixed !important;
+    top: 270px;
+    right: 0;
+}
+
+.multi-select-item {
+    padding: .25rem .5rem;
+    border-radius: 3px;
+    display: inline-flex;
+    margin-right: .5rem;
+  }
+
+.multi-select-item i{
+    margin-top: 0.2rem;
+    margin-right: 0.5rem;
+}

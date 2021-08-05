@@ -1,0 +1,22 @@
+<section class="skills section" id="skills">
+
+  <div class="section-header bd-grid">
+    <h2 class="section-title">Skills</h2>
+    <i Class="bx bxs-edit edit__icon" (click)="openModalDialog()"></i>
+  </div>
+
+  <div class="skills__content bd-grid">
+          <div class="skills__name" *ngFor="let skill of skills">
+              <span class="skills__circle"></span> {{skill}}
+          </div>
+  </div>
+</section>
+
+<p-dialog header="Edit Skills" [(visible)]="displayModal" [modal]="true" [breakpoints]="{'960px': '75vw', '640px': '90vw'}" [style]="{width: '60vw'}" [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+    <div class="grid">
+        <div class="col p-fluid"><p-chips [(ngModel)]="editedSkills" ></p-chips></div>
+    </div>
+        <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="closeModalDialog()" label="Update" styleClass="p-button-raised"></p-button>
+        </ng-template>
+</p-dialog>

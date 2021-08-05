@@ -1,0 +1,24 @@
+<section class="languages section" id="languages">
+
+  <div class="section-header bd-grid">
+    <h2 class="section-title">Languages</h2>
+    <i Class="bx bxs-edit edit__icon" (click)="openModalDialog()"></i>
+  </div>
+
+  <div class="languages__container">
+    <ul class="languages__content bd-grid">
+      <li class="languages__name" *ngFor="let language of languages">
+        <span class="languages__circle"></span> {{ language }}
+      </li>
+    </ul>
+  </div>
+</section>
+
+<p-dialog header="Edit Languages" [(visible)]="displayModal" [modal]="true" [breakpoints]="{'960px': '75vw', '640px': '90vw'}" [style]="{width: '60vw'}" [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+    <div class="grid">
+        <div class="col p-fluid"><p-chips [(ngModel)]="editedLanguages" ></p-chips></div>
+    </div>
+        <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="closeModalDialog()" label="Update" styleClass="p-button-raised"></p-button>
+        </ng-template>
+</p-dialog>
