@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+      "name": "Music",
+      "icon": "bx-headphone"
+    },
+    {
+      "name": "Travel",
+      "icon": "bxs-plane-alt"
+    },
+    {
+      "name": "Read",
+      "icon": "bx-book"
+    },
+    {
+      "name": "Fitness",
+      "icon": "bx-dumbbell"
+    },
+    {
+      "name": "Art",
+      "icon": "bx-paint"
+    },
+    {
+      "name": "Games",
+      "icon": "bxs-joystick"
+    },
+    {
+      "name": "Movies",
+      "icon": "bx-tv"
+    },
+    {
+      "name": "Shop",
+      "icon": "bxs-shopping-bag"
+    },
+    {
+      "name": "Cook",
+      "icon": "bxs-dish"
+    },
+    {
+      "name": "Sports",
+      "icon": "bx-football"
+    },
+    {
+      "name": "Photography",
+      "icon": "bxs-camera"
+    }
+  ]
+}

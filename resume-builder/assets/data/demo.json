@@ -1,0 +1,126 @@
+{
+  "personal": {
+    "profileImage": "assets/img/perfil.jpg",
+    "firstName": "JOHN",
+    "lastName": "DOE",
+    "profession": "Web developer",
+    "address": "NY - USA",
+    "email": "user@email.com",
+    "phone": "999-888-777"
+  },
+  "social": [
+    {
+      "name": "@johndoe",
+      "link": "https://linkedin.com/",
+      "icon": "bxl-linkedin-square"
+    },
+    {
+      "name": "@johndoe",
+      "link": "https://facebook.com/",
+      "icon": "bxl-facebook"
+    },
+    {
+      "name": "@johndoe",
+      "link": "https://instagram.com/",
+      "icon": "bxl-instagram"
+    }
+  ],
+  "profile": "I am a person, responsible with their work during working hours. Finish various technical and higher studies at large universities. I have several years of experience and achievements in the labor field. Willing to take ownership of core components. Work effectively with other teams to ensure robust solutions.",
+  "education": [
+    {
+      "title": "MASTER IN UI/UX",
+      "studies": "Institute of studies",
+      "year": "2019 - 2021"
+    },
+    {
+      "title": "WEB DEVELOPER",
+      "studies": "Institute of studies",
+      "year": "2016 - 2019"
+    },
+    {
+      "title": "MASTER OF DESIGN",
+      "studies": "University of Studies",
+      "year": "2010 - 2015"
+    }
+  ],
+  "languages": ["English", "French", "Spanish", "German"],
+  "experience": [
+    {
+      "title": "MOBILE APPLICATION DEVELOPER",
+      "company": "From 2019 to Present | App Tech",
+      "description": "Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity."
+    },
+    {
+      "title": "UI / UX DESIGN AREA",
+      "company": "From 2017 to 2019 | Adobe Inc",
+      "description": "Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity."
+    },
+    {
+      "title": "JUNIOR UI / UX DESIGNER",
+      "company": "From 2013 to 2017 | Tech Soft",
+      "description": "Work in this company dedicating the best responsibility in the area that corresponds, delivering the best results for the company and improving productivity."
+    }
+  ],
+  "skills": [
+    "Html",
+    "Css",
+    "Sass",
+    "JavaScript",
+    "TypeScript",
+    "Angular",
+    "Vue.Js",
+    "Vuetify",
+    "React",
+    "React Native",
+    "JQuery",
+    "AJAX",
+    "Node.js",
+    "NPM",
+    "MongoDB",
+    "MySQL",
+    "Git",
+    "SVN"
+  ],
+  "certificates": [
+    {
+      "title": "Certified for compliance in the work area (2012)",
+      "description": "For meeting the expectations of leading the team."
+    },
+    {
+      "title": "Achievement medal for productivity (2019)",
+      "description": "For meeting the expectations of leading the team."
+    }
+  ],
+  "references": [
+    {
+      "title": "Mr. ABC",
+      "subtitle": "Sr. Director",
+      "phone": "999-777-666",
+      "email": "user@email.com"
+    },
+    {
+      "title": "Mr. XYZ",
+      "subtitle": "Mag. Developer",
+      "phone": "999-777-666",
+      "email": "user@email.com"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music",
+      "icon": "bx-headphone"
+    },
+    {
+      "name": "Travel",
+      "icon": "bxs-plane-alt"
+    },
+    {
+      "name": "Read",
+      "icon": "bx-book"
+    },
+    {
+      "name": "Fitness",
+      "icon": "bx-dumbbell"
+    }
+  ]
+}
